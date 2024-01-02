@@ -1,3 +1,10 @@
+
+colorize() {
+    local color="$1"
+    local text="$2"
+    local NC='\033[0;34m' # No Color
+    echo -e "${color}${text}${NC}"
+}
 NC='\033[1;33m'
 RED='\033[0;31m'
 echo "\n\n"
@@ -6,7 +13,7 @@ echo "${NC}#--------------------------------[UPDATE]----------------------------
 git add *
 git status 
 git commit -m "update"
+echo -e "$(colorize '\033[1;31m' 'git push')"
 
-out = git push
 echo "$(RED) $(out) $(RED)"
 
