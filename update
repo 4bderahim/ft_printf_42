@@ -13,4 +13,5 @@ echo "${NC}#--------------------------------[UPDATE]----------------------------
 git add *
 git status 
 git commit -m "update"
+git push
 echo -e "$(colorize '\033[1;31m' 'example test')"
