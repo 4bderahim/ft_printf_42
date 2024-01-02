@@ -14,6 +14,3 @@ git add *
 git status 
 git commit -m "update"
 echo -e "$(colorize '\033[1;31m' 'git push')"
-
-echo "$(RED) $(out) $(RED)"
-
