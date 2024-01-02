@@ -108,6 +108,7 @@ void hello(char *p, ...)
 int main()
 {
     char c[] = "NOne of the above!";
-    hello("hello%s]", c);
+	int x = 9;
+    printf("hello %d ||%D]", x, x);
     return (0);
 }
