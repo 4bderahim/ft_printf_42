@@ -10,8 +10,8 @@ RED='\033[0;31m'
 echo "\n\n"
 
 
-echo -e "$(NC)     ▄▀█ █▀▀ █░░ ▄▄ █▄▀ █▀█ █ █▀▄  $(NC)"
-echo -e "$(NC)     █▀█ ██▄ █▄▄ ░░ █░█ █▀▄ █ █▄▀  $(NC)"
+echo -e "$(RED)     ▄▀█ █▀▀ █░░ ▄▄ █▄▀ █▀█ █ █▀▄  $(NC)"
+echo -e "$(RED)     █▀█ ██▄ █▄▄ ░░ █░█ █▀▄ █ █▄▀  $(NC)"
 git add *
 git status 
 git commit -am "update"
