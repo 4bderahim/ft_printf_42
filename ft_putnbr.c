@@ -1,10 +1,10 @@
 
 #include "ft_printf.h"
-void     ft_putchar(char c)
+static void     ft_putchar(char c)
 {
     write(1, &c, 1);
 }
-void ft_putstr(char *s)
+static void putstr(char *s)
 {
     int i = 0;
     while (s[i])
@@ -68,7 +68,7 @@ int ft_putnbr(int n)
 	length = 0;
 	if (n == -2147483648)
 	{
-		ft_putstr("-2147483648");
+		putstr("-2147483648");
 		return (11);
 	}
 	else
