@@ -13,6 +13,7 @@ echo "${NC}#--------------------------------[UPDATE]----------------------------
 git add *
 git status 
 git commit -m "update"
-git push
-OUT = $(git push)
-echo -e "$(colorize '\033[1;31m' "$(OUT)")"
+git push --color=auto | colorize '\033[1;31m'
+#git push
+#OUT = $(git push)
+#echo -e "$(colorize '\033[1;31m' "$(OUT)")"
