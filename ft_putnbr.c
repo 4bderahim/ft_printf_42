@@ -37,12 +37,14 @@ static int	power(int base, int exp)
 	return (res);
 }
 
-void	put_numbers(int num)
+int	put_numbers(int num)
 {
 	int	len;
 	int	res;
 	int	po;
+	int length;
 
+	length = 0;
 	res = 0;
 	len = num_len(num) - 1;
 	while (len >= 0)
@@ -50,16 +52,22 @@ void	put_numbers(int num)
 		po = power(10, len);
 		res = num / po;
 		ft_putchar(res + '0');
+		length++;
 		num = num % (po);
 		len--;
 	}
+	return (length);
 }
 
-void	ft_putnbr(int n)
+int ft_putnbr(int n)
 {
+	int length;
+
+	length = 0;
 	if (n == -2147483648)
 	{
 		ft_putstr("-2147483648");
+		return (11);
 	}
 	else
 	{
@@ -67,12 +75,15 @@ void	ft_putnbr(int n)
 		{
 			ft_putchar('-');
 			n *= -1;
+			length++;
 		}
 		if (n < 10)
 		{
 			ft_putchar(n + '0');
+			length++;
 		}
 		else
-			put_numbers(n);
+			length += put_numbers(n);
 	}
+	return (length);
 }
