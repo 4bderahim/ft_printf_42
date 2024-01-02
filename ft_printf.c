@@ -92,10 +92,11 @@ int ft_putnbr(int n)
     printf("\n\t\t [%d]", length);
 	return (length);
 }
+
 int ft_printf(const char *s, ...)
 {
     va_list args;
-    //char *s;
+
     int i;
     int length_to_return;
 
@@ -105,24 +106,17 @@ int ft_printf(const char *s, ...)
     while (s[i])
     {
         ft_putchar(s[i]);
-        if (s[i] == '%')
-        {
-            if (s[i+1] == 'd' || s[i+1] == 'D')
-                length_to_return += ft_putnbr(va_arg(args, int));
-            i++;
-        }
-        else 
-        {   
-            length_to_return++;
-        }
+        if (s[i] == '%' && s[i] == 'd')
+			length_to_return += ft_putnbr(va_arg(args, int));
+		if (s[i] == '%' && s[i] == 's')
+			length_to_return += ft_putnbr(va_arg(args, int));
+		else
+			i++;
         i++;
-        
     }
     va_end(args);
     return (length_to_return);
 }
-
-
 
 int main()
 {
