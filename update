@@ -5,7 +5,8 @@ echo "\n\n"
 echo "${NC}#--------------------------------[UPDATE]-------------------------------#${NC}"
 git add *
 git status 
-${RED}
 git commit -m "update"
-git push
+
+out = git push
+echo "$(RED) $(out) $(RED)"
 
