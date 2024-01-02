@@ -1,9 +1,11 @@
 NC='\033[1;33m'
+RED='\033[0;31m'
 echo "\n\n"
 
 echo "${NC}#--------------------------------[UPDATE]-------------------------------#${NC}"
 git add *
 git status 
+${RED}
 git commit -m "update"
 git push
 
