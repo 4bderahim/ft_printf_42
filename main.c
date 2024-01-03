@@ -8,7 +8,8 @@ int main()
 {
     char c[] = "NOne of the above!";
 	int x = 9;
-    int t = ft_printf("%d%D %%", x, x);
-    printf("[%d]", t);
+    int d = printf("%s %D %%\n", c, x);
+    int t = ft_printf("%s %D %%", c, x);
+    printf("\n[%d||%d]", t, d);
     return (0);
 }
