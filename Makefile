@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
 CC = cc 
 
-CFILES = ft_putnbr.c ft_putstr.c ft_putchar
+CFILES = ft_putnbr.c ft_putstr.c ft_putchar.c ft_printf.c
 
 OFILES = $(CFILES:.c=.o)
 

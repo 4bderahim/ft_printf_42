@@ -1,6 +1,6 @@
 
 #include "ft_printf.h"
-static void     ft_putchar(char c)
+static void     ft_putchr(char c)
 {
     write(1, &c, 1);
 }
@@ -9,7 +9,7 @@ static void putstr(char *s)
     int i = 0;
     while (s[i])
         {
-           ft_putchar(s[i]);
+           ft_putchr(s[i]);
             i++;
         }
 }
@@ -53,7 +53,7 @@ int	put_numbers(int num)
 	{
 		po = power(10, len);
 		res = num / po;
-		ft_putchar(res + '0');
+		ft_putchr(res + '0');
 		length++;
 		num = num % (po);
 		len--;
@@ -75,13 +75,13 @@ int ft_putnbr(int n)
 	{
 		if (n < 0)
 		{
-			ft_putchar('-');
+			ft_putchr('-');
 			n *= -1;
 			length++;
 		}
 		if (n < 10)
 		{
-			ft_putchar(n + '0');
+			ft_putchr(n + '0');
 			length++;
 		}
 		else
