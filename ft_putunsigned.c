@@ -1,31 +1,47 @@
 
 #include "ft_printf.h"
 #include <stdio.h>
-int ft_putunsigned(unsigned int n, int count)
+int get_length(unsigned int n)
 {
-    
+   
+    int i;
 
-    
-    if (n <= 9)
+    i = 0;
+    while (n != 0)
     {
-        count++;
-        ft_putchar(n + '0');
-        //count++;
+        n = n / 10;
+        i++;
     }
-    else 
-    {
-        ft_putunsigned(n / 10, count);
-        count++;
-
-        ft_putchar((n % 10) + '0');
-        
-    }
-    return (count + 1);
+    return (i);
+}
+int ft_putunsigned(unsigned int n)
+{
+    int length;
+    char *all;
+    int len;
     
+    if (n < 10)
+        return (ft_putchar(n + '0'));
+    length = get_length(n);
+    len = length;
+    all = (char *) malloc(length+1);
+    if (!all)
+        return (0);
+    length--;
+    while (length >= 0)
+        {
+            all[length] = ((n % 10) + '0');
+            n = n / 10;
+            length--;
+        }
+    all[len] = 0;
+    ft_putstr(all);
+    free(all);
+    return (len);
 }
 
-int main()
-{
-    int t = ft_putunsigned(23455, 0);
-    printf("\n%u        [%d]", 23455, t);
-}
+// int main()
+// {
+//     int t = ft_putunsigned(-23455);
+//     printf("\n%u        [%d]", -23455, t);
+// }
