@@ -10,6 +10,11 @@ int	ft_putstr(char *s)
 	int	i;
     int length;
 
+	if (!s)
+		{
+			ft_putstr("(null)");
+			return (6);
+		}
     length = 0;
 	i = 0;
 	while (s[i])
