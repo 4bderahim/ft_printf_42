@@ -3,7 +3,6 @@
 #include <stdio.h>
 int get_length(unsigned int n)
 {
-   
     int i;
 
     i = 0;

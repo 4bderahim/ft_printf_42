@@ -17,6 +17,10 @@ int avg_func(va_list varg,const char *s)
 		 	return (ft_putchar('%'));
         else if (s[i+1] == 'u')
 		 	return (ft_putunsigned(va_arg(varg,unsigned int)));
+         else if (s[i+1] == 'x')
+		 	return (ft_puthex(va_arg(varg, unsigned int), 0));
+        else if (s[i+1] == 'X')
+		 	return (ft_puthex(va_arg(varg, unsigned int), 1));
 		else
 			i++;
     }
@@ -45,7 +49,6 @@ int ft_printf(const char *s, ...)
                 ft_putchar(s[i]);
                 length_to_return++;
             }
-        
         i++;
     }
 
@@ -53,12 +56,5 @@ int ft_printf(const char *s, ...)
     return (length_to_return);
 }
 
-// int main()
-// {
-//     char c[] = "NOne of the above!";
-// 	int x = 9;
-//     int t = ft_printf("%d%D %%", x, x);
-//     printf("[%d]", t);
-//     return (0);
-// }
+
 
