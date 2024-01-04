@@ -21,6 +21,8 @@ int avg_func(va_list varg,const char *s)
 		 	return (ft_puthex(va_arg(varg, unsigned int), 0));
         else if (s[i+1] == 'X')
 		 	return (ft_puthex(va_arg(varg, unsigned int), 1));
+        else if (s[i+1] == 'p')
+		 	return (ft_putptr(va_arg(varg, void *)));
 		else
 			i++;
     }
@@ -30,7 +32,6 @@ int avg_func(va_list varg,const char *s)
 int ft_printf(const char *s, ...)
 {
     va_list args;
-
     int i;
     int length_to_return;
 

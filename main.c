@@ -7,10 +7,10 @@
 int main()
 {
     char c[] = "NOne of the above!";
-	int x = -223;
+	int x = 23;
     printf("%u\n", x);
-    int d = printf("%d %x", x, x);
-    int t = ft_printf("%d %x", x, x);
+    int d = printf("%p\n", c);
+    int t = ft_printf("%p", c);
     printf("\n[%d||%d]", d, t);
     return (0);
 }
