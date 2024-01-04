@@ -7,7 +7,7 @@ int avg_func(va_list varg,const char *s)
     i = 0;
     while (s[i])
     {
-        if (s[i+1] == 'd' || s[i+1] == 'i')// || s[i+1] == 'D')
+        if (s[i+1] == 'd' || s[i+1] == 'i')
             return ft_putnbr(va_arg(varg, int));
 	    else if (s[i+1] == 's')
 			return (ft_putstr(va_arg(varg, char *)));

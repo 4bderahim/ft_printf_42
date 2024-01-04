@@ -1,17 +1,20 @@
 
 #include "ft_printf.h"
-static void     ft_putchr(char c)
+
+static void	ft_putchr(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
-static void putstr(char *s)
+static void	putstr(char *s)
 {
-    int i = 0;
-    while (s[i])
-        {
-           ft_putchr(s[i]);
-            i++;
-        }
+	int	i;
+
+	i = 0;
+	while (s[i])
+	{
+		ft_putchr(s[i]);
+		i++;
+	}
 }
 static int	num_len(int num)
 {
@@ -44,7 +47,7 @@ int	put_numbers(int num)
 	int	len;
 	int	res;
 	int	po;
-	int length;
+	int	length;
 
 	length = 0;
 	res = 0;
@@ -61,7 +64,7 @@ int	put_numbers(int num)
 	return (length);
 }
 
-int ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	int length;
 
