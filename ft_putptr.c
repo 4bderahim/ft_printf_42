@@ -23,11 +23,10 @@ int	ft_putptr(void *ptr)
 	ft_putchar('0');
 	ft_putchar('x');
 	p = (unsigned long)ptr; 
-	base = strdup("0123456789abcdef");
+	base = "0123456789abcdef";
 	if (!base)
 		return (0);
 	len = 0;
 	print_ptr(p, base, &len);
-	free(base);
 	return (len + 2);
 }

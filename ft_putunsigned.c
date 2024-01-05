@@ -1,7 +1,5 @@
 
 #include "ft_printf.h"
-#include <stdio.h>
-
 int	get_length(unsigned int n)
 {
 	int	i;
@@ -39,9 +37,3 @@ int	ft_putunsigned(unsigned int n)
 	free(all);
 	return (len);
 }
-
-// int main()
-// {
-//     int t = ft_putunsigned(-23455);
-//     printf("\n%u        [%d]", -23455, t);
-// }
