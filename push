@@ -23,6 +23,5 @@ git status
 git commit -am "update"
 
 git push | colorize '\033[1;32m'
-#git push
-#OUT = $(git push)
+
 #echo -e "$(colorize '\033[1;33m' "$(OUT)")"
