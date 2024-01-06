@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/06 21:52:04 by ael-krid          #+#    #+#             */
+/*   Updated: 2024/01/06 21:52:27 by ael-krid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int avg_func(va_list varg,const char *s)
@@ -26,14 +38,15 @@ int avg_func(va_list varg,const char *s)
 		else
 			i++;
     }
+    
     return (0);
 }
 
 int ft_printf(const char *s, ...)
 {
-    va_list args;
-    int i;
-    int length_to_return;
+    va_list	args;
+    int	i;
+    int	length_to_return;
 
     length_to_return = 0;
     i = 0;
@@ -44,7 +57,7 @@ int ft_printf(const char *s, ...)
         {
             length_to_return += avg_func(args, s+i);
             i++;
-        }  
+        }
         else
             {
                 ft_putchar(s[i]);
@@ -52,10 +65,10 @@ int ft_printf(const char *s, ...)
             }
         i++;
     }
-
     va_end(args);
     return (length_to_return);
 }
+
 
 
 

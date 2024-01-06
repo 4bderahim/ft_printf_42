@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/06 21:52:57 by ael-krid          #+#    #+#             */
+/*   Updated: 2024/01/06 21:53:14 by ael-krid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static void	print_hex(unsigned int hex, char *base, int *len)
@@ -14,6 +26,7 @@ static void	print_hex(unsigned int hex, char *base, int *len)
 		*len += 1;
 	}
 }
+
 int	ft_puthex(unsigned int hex, int u)
 {
 	char	*base;

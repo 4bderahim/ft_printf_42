@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/01/06 21:54:02 by ael-krid          #+#    #+#             */
+/*   Updated: 2024/01/06 21:54:19 by ael-krid         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 static void	print_ptr(unsigned long hex, char *base, int *length)
@@ -14,6 +26,7 @@ static void	print_ptr(unsigned long hex, char *base, int *length)
 		ft_putchar(base[hex % 16]);
 	}
 }
+
 int	ft_putptr(void *ptr)
 {
 	char			*base;
@@ -30,3 +43,4 @@ int	ft_putptr(void *ptr)
 	print_ptr(p, base, &len);
 	return (len + 2);
 }
+
