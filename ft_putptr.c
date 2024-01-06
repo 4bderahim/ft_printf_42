@@ -32,10 +32,10 @@ int	ft_putptr(void *ptr)
 	char			*base;
 	unsigned long	p;
 	int				len;
-    
+
 	ft_putchar('0');
 	ft_putchar('x');
-	p = (unsigned long)ptr; 
+	p = (unsigned long)ptr;
 	base = "0123456789abcdef";
 	if (!base)
 		return (0);
@@ -43,4 +43,3 @@ int	ft_putptr(void *ptr)
 	print_ptr(p, base, &len);
 	return (len + 2);
 }
-

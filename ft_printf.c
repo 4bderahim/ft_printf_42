@@ -6,13 +6,13 @@
 /*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:52:04 by ael-krid          #+#    #+#             */
-/*   Updated: 2024/01/06 21:58:06 by ael-krid         ###   ########.fr       */
+/*   Updated: 2024/01/06 21:52:27 by ael-krid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int avg_func(va_list varg,const char *s)
+int avg_func(va_list varg,const char *s)
 {
     int i;
 
