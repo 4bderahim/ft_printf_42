@@ -6,14 +6,13 @@
 /*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 22:55:19 by ael-krid          #+#    #+#             */
-/*   Updated: 2024/01/06 22:55:23 by ael-krid         ###   ########.fr       */
+/*   Updated: 2024/01/07 21:46:13 by ael-krid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include <stdlib.h>
 # include <unistd.h>
 
 int	ft_putchar(char c);

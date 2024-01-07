@@ -6,16 +6,11 @@
 /*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:53:21 by ael-krid          #+#    #+#             */
-/*   Updated: 2024/01/06 21:53:54 by ael-krid         ###   ########.fr       */
+/*   Updated: 2024/01/07 21:38:45 by ael-krid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-// static void	ft_putchr(char c)
-// {
-// 	write(1, &c, 1);
-// }
 
 static void	putstr(char *s)
 {

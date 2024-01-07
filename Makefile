@@ -13,7 +13,7 @@ all : $(NAME)
 %.o : %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
 	
- $(NAME) : $(OFILES)
+$(NAME) : $(OFILES)
 	ar rcs $(NAME) $(OFILES)
 
 clean: 
