@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 static int	get_length(unsigned int n)
 {
 	int	i;

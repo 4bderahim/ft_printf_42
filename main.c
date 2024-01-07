@@ -7,9 +7,9 @@
 int	main(void)
 {
 	char c[] = "NOne of the above!";
-	int s = 0;
-	int d = printf(" %.3d ", 11);
-	int t = ft_printf(" %.3d ", 11);
-	printf("\n[%d||%d]", d, t);
+	int s = 12425;
+	int d = printf(" %u ", s);
+	int t = ft_printf(" %u ", s);
+	 printf("\n[%d||%d]", d, t);
 	return (0);
 }
