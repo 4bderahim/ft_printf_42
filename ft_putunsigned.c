@@ -12,41 +12,25 @@
 
 #include "ft_printf.h"
 
-static int	get_length(unsigned int n)
+static void	print(unsigned int n, int *length)
 {
-	int	i;
-
-	i = 0;
-	while (n != 0)
+	if (n < 10)
 	{
-		n = n / 10;
-		i++;
+		*length += ft_putchar(n + '0');
 	}
-	return (i);
+	else
+	{
+		print(n / 10, length);
+		ft_putchar(n % 10 + '0');
+		*length += 1;
+	}
 }
 
 int	ft_putunsigned(unsigned int n)
 {
-	int		length;
-	char	*all;
-	int		len;
+	int	len;
 
-	if (n < 10)
-		return (ft_putchar(n + '0'));
-	length = get_length(n);
-	len = length;
-	all = (char *)malloc(length + 1);
-	if (!all)
-		return (0);
-	length--;
-	while (length >= 0)
-	{
-		all[length] = ((n % 10) + '0');
-		n = n / 10;
-		length--;
-	}
-	all[len] = 0;
-	ft_putstr(all);
-	free(all);
+	len = 0;
+	print(n, &len);
 	return (len);
 }
