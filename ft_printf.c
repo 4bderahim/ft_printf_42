@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int	avg_func(va_list varg, const char *s)
+static int	avg_func(va_list varg, const char *s)
 {
 	int	i;
 

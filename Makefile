@@ -8,6 +8,7 @@ CFILES = ft_putnbr.c ft_putstr.c ft_putchar.c ft_printf.c ft_putunsigned.c ft_pu
 OFILES = $(CFILES:.c=.o)
 
 all : $(NAME)
+	
 
 %.o : %.c 
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -16,7 +17,7 @@ all : $(NAME)
 	ar rcs $(NAME) $(OFILES)
 
 clean: 
-	rm -f $(OFILES) $(OFILES)
+	rm -f $(OFILES)
 
 fclean: clean 
 	 rm -f $(NAME)
