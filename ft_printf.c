@@ -6,7 +6,7 @@
 /*   By: ael-krid <ael-krid@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/06 21:52:04 by ael-krid          #+#    #+#             */
-/*   Updated: 2024/01/07 21:03:16 by ael-krid         ###   ########.fr       */
+/*   Updated: 2024/01/09 18:02:20 by ael-krid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,7 @@ int	ft_printf(const char *s, ...)
 	int		i;
 	int		length_to_return;
 
-	if (write(1, "", 0) == -1)
-		return (-1);
+
 	length_to_return = 0;
 	i = 0;
 	va_start(args, s);
